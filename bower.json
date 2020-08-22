@@ -1,0 +1,22 @@
+{
+  "name": "demo",
+  "authors": [
+    "arjun <arjunpandit0840@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-gridster": "^0.13.15",
+    "angular-ui-calendar": "^1.0.2",
+    "angular-chart.js": "^1.1.1"
+  }
+}

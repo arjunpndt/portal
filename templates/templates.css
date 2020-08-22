@@ -1,0 +1,40 @@
+.chart {
+    height: 150%;
+    width: 150%;
+    padding: 50px;
+}
+
+.attendance-heading {
+    color: rgb(80, 155, 240);
+    margin: 20px;
+}
+
+.attendance-content table {
+    width: 90%;
+    font-size: 110%;
+}
+
+.attendance-content th {
+    color: rgb(99, 99, 99);
+}
+
+.attendance-content tr {
+    height: 40px;
+}
+
+.border--bottom {
+    border-bottom: 2px solid rgb(204, 199, 199)
+}
+
+.attendece--num {
+    color: green;
+}
+
+.attendence--last--content {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.attendence-color-grey {
+    color: rgb(134, 132, 132);
+}

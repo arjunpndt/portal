@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+        <title>AngularJS Responsive Calendar Demo</title>
+   </head>
+<body>
+<div ng-app="calendarDemoApp">
+ <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/ng-responsive-calendar/dist/css/calendar.min.css"/>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.10/angular.min.js"></script>
+   
+    <script src="bower_components/ng-responsive-calendar/dist/js/calendar-tpls.js"></script>
+    <script src="bower_components/ng-responsive-calendar/demo/calendarDemoCtrl.js"></script>
+
+
+</header>
+<section class="content" style="margin-top: 70px;">
+    <section class="container">
+        <section ng-controller="CalendarDemoCtrl" ng-init="loadEvents()">
+            <div class="alert alert-success" ng-show="event">Event selected:{{event.startTime|date:
+                'MMM/dd,yyyy,HH:mm'}} - {{event.endTime|date:'MMM/dd,yyyy,HH:mm'}}, {{event.title}}
+            </div>
+
+            
+            <div class="well well-sm">
+                <calendar ng-model="currentDate" calendar-mode="mode" event-source="eventSource"
+                          range-changed="reloadSource(startTime, endTime)"
+                          event-selected="onEventSelected(event)"
+                          time-selected="onTimeSelected(selectedTime, events)" step="30"></calendar>
+            </div>
+        </section>
+    </section>
+</section>
+</div>
+</body>
+</html>

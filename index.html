@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width" />
+
+	<!-- bootstrap -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js" integrity="sha256-0YzDSJS0qH+wpvug+Im1cMB9CX919NMtHj0d2VVHPp4=" crossorigin="anonymous"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.26/angular-ui-router.min.js"></script>
+   
+
+  
+   
+
+
+    <link rel="stylesheet" href="bower_components/angular-gridster/dist/angular-gridster.min.css"/>
+	<script src="bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+	<script src="bower_components/angular-gridster/dist/angular-gridster.min.js"></script>
+
+  <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    
+
+
+   <!-- font family -->
+   <!-- <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   <script type="text/javascript" src="index.js"></script>
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="templates/templates.css">
+ 
+
+
+</head>
+<body ng-app="Homepage" ng-controller="maincontroller">
+
+
+
+<nav class="navbar navbar-dark bg-dark">
+  
+  <a  class="navbar-brand" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <B>STUDENT</B>PORTAL</a>
+  
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Dashboard <i class="fa fa-home" style="left:0px;" ></i></a>
+  <a href="#">Acedimics</a>
+  <a href="#">Mentoring</a>
+  <a href="#">Account Details</a>
+  <a href="#">Fee Letter</a>
+  <a href="#">Registration</a>
+  <a href="#">Mentoring</a>
+  <a href="#">Update DOB</a>
+  <a href="#">Placement Policy Form</a>
+  <a href="#">Surveys & feedbacks</a>
+  <a href="#">Update DOB</a>
+</div>
+
+<div id="main">
+<div gridster="gridsterOpts">
+	<ul>
+		<li gridster-item="item" ng-repeat="item in standardItems"  style="background-color: whitesmoke; border-radius:6px;">
+			 <div ui-view="{{templates[$index]}}"></div>
+		</li>
+	</ul>
+</div>
+<div>
+
+<div>
+    <!-- jquery.min.js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- angular.js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <!-- angular-ui-router.js -->
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- <script src="../lib/angular-ui-router.min.js"></script> -->
+    <!-- gridster -->
+    <script src="bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+    <script src="bower_components/angular-gridster/dist/angular-gridster.min.js"></script>
+    <!-- ui.calendar -->    
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>    
+    <!-- <script type="text/javascript" src="../bower_components/angular-ui-calendar/src/calendar.js"></script> -->
+    <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
+    <script src="calendar.js"></script>
+    <!-- url.js -->
+   
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<div>
+  <section style="padding: 30px 25px 15px;">
+    <h1 style="font-size: 28px;color: #1199d3;letter-spacing: 1px; font-weight: 600">ACADEMIC CALANDER</h1>
+  </section>
+  <section style="transition: opacity .25s linear; padding: 15px 25px; position:relative;">
+  	<div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+  </section>
+  
+</div>
+
+
+    <script src="bower_components/chart.js/dist/Chart.min.js"></script>
+	  <script src="bower_components/chart.js/samples/utils.js"></script>
+	
+</body>
+</html>
